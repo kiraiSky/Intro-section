@@ -1,0 +1,168 @@
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 18px;
+  background-color: hsl(0, 0%, 98%);
+}
+
+a{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+
+img{
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+ul, li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px;
+}
+
+header > img{
+ padding-right: 80px;
+}
+
+.menu-container{
+  display: flex;
+  color: hsl(0, 0%, 41%);
+  flex: 1;
+}
+
+.nav-open{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.nav-open li{
+  cursor: pointer;
+  transition: .3s;
+}
+
+.nav-open a:hover{
+  color: hsl(0, 0%, 8%);
+}
+
+
+.nav-open.active{
+  color: hsl(0, 0%, 8%);
+}
+
+.nav-features, .nav-company{
+  position: relative;
+}
+
+.nav-features > a > img, .nav-company > a > img{
+  display: none;
+}
+
+.nav-features > a > img.active, .nav-company > a > img.active {
+  display: inline-block;
+}
+
+.nav-company-open, .nav-features-open{
+  display: block;
+  position: absolute;
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: #ccc 0px 0px 20px ;
+  min-width: 120px;
+  z-index: 999;
+}
+
+.nav-features-open, .nav-company-open{
+  left: -25px;
+  width: max-content;
+  visibility: hidden;
+  overflow: hidden;
+  padding: 0px;
+  height: 0;
+  transition: .5s ease-in-out;
+}
+
+.nav-company-open{
+  left: 0;
+}
+
+.nav-company-open.active{
+  height: 140px;
+  visibility: visible;
+  padding: 20px;
+}
+
+.nav-features-open.active{
+  left: -80px;
+  visibility: visible;
+  height: 160px;
+  padding: 20px;
+}
+
+.nav-features-open img{
+  margin-right: 10px;
+}
+
+
+.nav-company-open li, .nav-features-open li{
+  padding: 10px;
+}
+
+.menu-container .btn-hamburguer{
+  display: none;
+}
+
+.mobile-login{
+  display: none;
+}
+
+.login > button{
+  background-color: transparent;
+  border: none;
+  padding: 17px 40px;
+  margin: 0;
+  font-size: 18px;
+  cursor: pointer;
+  color: hsl(0, 0%, 41%);
+  font-family: 'Epilogue', sans-serif;
+}
+
+.login > button:hover{
+  border-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 8%);
+}
+
+.login .btn-register{
+  border: 2px solid hsl(0, 0%, 41%);
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+
+@media (max-width: 700px) {
+  
+  header{
+    justify-content: space-between;
+  }
+
+  .menu-container .btn-hamburguer{
+    display: block;
+  }
+}
