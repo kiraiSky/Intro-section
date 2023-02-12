@@ -4,11 +4,56 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
   <script src="./js/script.js" defer></script>
-  <title>Document</title>
+  <title>Snap</title>
 </head>
 <body>
+  
+  <header>
+    <img src="./img/logo.svg" alt="snap logo">
+
+    <nav class="menu-container">
+      <button class="btn-hamburguer">menu</button>
+      <ul class="nav-open">
+        <li class="nav-features">
+          <a href="#">Features
+          <img src="./img/icon-arrow-down.svg" class="active" alt="arrow poiting down">
+          <img src="./img/icon-arrow-up.svg" alt="arrow poiting up">
+          <ul class="nav-features-open"></a>
+            <li> <a href="#"><img src="./img/icon-todo.svg" alt="todo list"> Todo List</a> </li>
+            <li> <a href="#"><img src="./img/icon-calendar.svg" alt="calendar"> Calendar</a> </li>
+            <li> <a href="#"><img src="./img/icon-reminders.svg" alt="bell"> Reminders</a> </li>
+            <li><a href="#"><img src="./img/icon-planning.svg" alt="clock"> Planning</a> </li>
+          </ul>
+        </li>
+
+        <li class="nav-company">
+          <a href="#">Company
+          <img src="./img/icon-arrow-down.svg" alt="arrow poiting down" class="active">
+          <img src="./img/icon-arrow-up.svg" alt="arrow poiting up">
+          </a>
+          <ul class="nav-company-open">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
+        </li>
+        <li><a href="#">Careers</a> </li>
+        <li><a href="#">About</a></li>
+
+        <div class="mobile-login">
+          <button class="mobile-btn-login">Login</button>
+          <button class="mobile-btn-register">Register</button>
+        </div>
+      </ul>
+    </nav>
+    <div class="login">
+      <button class="btn-login">Login</button>
+      <button class="btn-register">Register</button>
+    </div>
+  </header>
   
 </body>
 </html>
