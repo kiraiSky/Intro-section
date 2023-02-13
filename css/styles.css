@@ -218,16 +218,68 @@ header > img{
   height:28px;
 }
 
-
-.main-container img{
+.main-container .desktop{
   max-width: 70%;
   justify-self: center;
+  display: block;
+}
+
+.main-container > .mobile{
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .main-container{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "img"
+      "main";
+  }
+
+  .main-container > .mobile{
+    display: block;
+    justify-self: center;
+  }
+
+  .main-container > .desktop{
+    display: none;
+  }
+
+  .call-to-action{
+    grid-area: main;
+    padding: 40px 0;
+    text-align: center;
+  }
+  .paragraph{
+    text-align: center;
+    margin: 20px auto;
+    max-width: 300px;
+  }
+
+  .clients{
+    height: 70px;
+    margin: 20px 0;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+
+  .clients img{
+    height: 18px;
+  }
+
+  
+
+
 }
 
 @media (max-width: 700px) {
   
   header{
     justify-content: space-between;
+  }
+
+  .h1-title{
+    font-size: 36px;
   }
 
   .menu-container .btn-hamburguer{
