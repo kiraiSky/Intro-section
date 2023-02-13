@@ -16,3 +16,20 @@ function toggleDropdown(btn){
   })
   dropDown.classList.toggle('active')
 }
+
+
+// mobile menu
+
+const btnMenuMobile = document.querySelector('.btn-hamburguer');
+
+
+btnMenuMobile.addEventListener('click', () =>{
+  openMenuMobile();
+})
+
+function openMenuMobile(){
+  const menu = document.querySelector('.menu-container');
+
+
+  menu.classList.toggle('active');
+}
