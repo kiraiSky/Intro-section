@@ -267,7 +267,73 @@ header > img{
     height: 18px;
   }
 
+  body{
+    overflow-x: hidden;
+  }
+
+  .menu-container{
+    visibility: none;
+    position: absolute;
+    top: 3.3vh;
+    right: 0;
+    width: 0vw;
+    height: 112vh;
+    background-color: hsl(0, 0%, 98%);
+    flex-direction: column;
+    align-items: start;
+    gap: 40px;
+    transition: .5s
+  }
+
+  .menu-container.active{
+    padding-left: 20px;
+    width: 50vw;
+  }
+
+  .menu-container .nav-open{
+    flex-direction: column;
+  }
+
+  .nav-features-open, .nav-company-open{
+    background: transparent;
+    box-shadow: none;
+    left: 0;
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    position: inherit;
+  }
+
+  .nav-features-open.active, .nav-company-open.active{
+    display: block;
+    visibility: visible;
+    height: 140px;
+    position: inherit;
+    background: transparent;
+    box-shadow: none;
+    margin: 0;
+    left: 0;
+
+  }
   
+  .menu-container .btn-hamburguer{
+    display: block;
+    cursor: pointer;
+    width: 48px;
+    align-self: flex-end;
+  }
+
+  .menu-container .btn-hamburguer div{
+    width: 32px;
+    height: 2px;
+    background-color: hsl(0, 0%, 8%);
+    margin: 8px;
+  }
+
+  .login{
+    display: none;
+  }
 
 
 }
@@ -280,9 +346,5 @@ header > img{
 
   .h1-title{
     font-size: 36px;
-  }
-
-  .menu-container .btn-hamburguer{
-    display: block;
   }
 }
