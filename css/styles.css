@@ -7,6 +7,11 @@ body{
   background-color: hsl(0, 0%, 98%);
 }
 
+*{
+  padding: 0;
+  margin: 0;
+}
+
 a{
   text-decoration: none;
   margin: 0;
@@ -155,6 +160,69 @@ header > img{
   margin-left: 10px;
 }
 
+/* main content */
+
+
+.main-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.call-to-action{
+  padding: 120px 0px 40px 120px;
+}
+
+.h1-title{
+  font-size: 86px;  
+  margin: 0;
+}
+.paragraph{
+  font-size: 18px;
+  color: hsl(0, 0%, 41%);
+  width: 460px;
+  line-height: 1.7rem;
+  margin: 40px 0px;
+}
+
+.btn-bgDark{
+  background-color: hsl(0, 0%, 8%);
+  border: none;
+  padding: 20px 40px;
+  margin: 0;
+  font-size: 18px;
+  cursor: pointer;
+  color: hsl(0, 0%, 98%);
+  font-family: 'Epilogue', sans-serif;
+  border-radius: 20px;
+  transition: .3s ease;
+  border: 2px solid hsl(0, 0%, 8%);
+  font-weight: 700;
+}
+
+.btn-bgDark:hover{
+  background-color: transparent;
+  border: 2px solid hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 8%);
+}
+
+.clients{
+  display: flex;
+  margin-top: 80px;
+  height: 90px;
+  align-items: center;
+  gap: 40px;
+}
+
+.clients img{
+  height:28px;
+}
+
+
+.main-container img{
+  max-width: 70%;
+  justify-self: center;
+}
 
 @media (max-width: 700px) {
   
