@@ -138,7 +138,7 @@ header > img{
   display: none;
 }
 
-.login > button{
+.login > button, .mobile-login > button{
   background-color: transparent;
   border: none;
   padding: 17px 40px;
@@ -149,12 +149,12 @@ header > img{
   font-family: 'Epilogue', sans-serif;
 }
 
-.login > button:hover{
+.login > button:hover, .mobile-login > button:hover{
   border-color: hsl(0, 0%, 8%);
   color: hsl(0, 0%, 8%);
 }
 
-.login .btn-register{
+.login .btn-register, .mobile-login .btn-register{
   border: 2px solid hsl(0, 0%, 41%);
   border-radius: 20px;
   margin-left: 10px;
@@ -282,12 +282,29 @@ header > img{
     flex-direction: column;
     align-items: start;
     gap: 40px;
-    transition: .5s
+    transition: .5s;
+    z-index: 999;
   }
 
   .menu-container.active{
     padding-left: 20px;
-    width: 50vw;
+    width: 65vw;
+  }
+
+  .menu-container .btn-hamburguer div{
+    transition: .3s ease-in-out;
+  }
+
+  .menu-container .btn-hamburguer .line1.active{
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+
+  .menu-container .btn-hamburguer .line2.active{
+    opacity: 0;
+  }
+
+  .menu-container .btn-hamburguer .line3.active{
+    transform: rotate(45deg) translate(-5px, -7px);
   }
 
   .menu-container .nav-open{
@@ -335,6 +352,19 @@ header > img{
     display: none;
   }
 
+  .mobile-login{
+    display: block;
+    text-align: center;
+    padding-right: 20px;
+  }
+
+  .mobile-login button{
+    width: 100%;
+  }
+
+  .mobile-login .btn-register{
+    margin-left: 0px;
+  }
 
 }
 
