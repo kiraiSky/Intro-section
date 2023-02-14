@@ -29,7 +29,11 @@ btnMenuMobile.addEventListener('click', () =>{
 
 function openMenuMobile(){
   const menu = document.querySelector('.menu-container');
+  const btnLines = btnMenuMobile.querySelectorAll('div');
 
+  btnLines.forEach((line) =>{
+    line.classList.toggle('active');
+  })
 
   menu.classList.toggle('active');
 }
