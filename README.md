@@ -1,4 +1,4 @@
-# Project Title
+# Snap
 
 A simple project wich tests my ability to create dropdown navigation menus, a common pattern on larger sites.
 
